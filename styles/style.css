@@ -10,7 +10,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background: linear-gradient(to top, #FEA301, #ffffff);
+  background: linear-gradient(to top, #ffd38e, #ffffff);
 }
 
 .raleway-font {
@@ -104,12 +104,14 @@ nav{
     align-items: center;
     cursor: pointer;
     animation-play-state: running;
+    
 }
 .marquee{
     display: inline-block;
     white-space: nowrap;
     animation: scroll 25s linear infinite;
     transform: translateX(100%);
+    
 }
 .marquee-container:hover .marquee {
     animation-play-state: paused;
@@ -240,25 +242,25 @@ nav{
     margin-top: 20px;
 }
 .icon-box{
-    width: 100px;  
-    height: 100px; 
+    width: 80px;
+    height: 80px; 
     border-radius: 50%;
     background-color: #fda12a;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 .icon-box:hover{
     background-color: #e6871f;
     transition: background-color 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
 }
-.fa-solid fa-chevron-left fa-2xl{
-    font-size: 24px;
+.fa-solid fa-chevron-left fa-xl{
+    font-size: 12px;
 }
-.fa-solid fa-chevron-right fa-2xl{
-    font-size: 24px;
+.fa-solid fa-chevron-right fa-xl{
+    font-size: 12px;
 }
 .story-container{
     max-width: 1440px;
@@ -413,7 +415,79 @@ nav{
     margin-top: -45px;
     margin-left: 20px;
 }
-
+.last-btn{
+    width: 197px;
+    height: 50px;
+    font-family: "Quicksand", serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    background-color: #111111;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    margin: 20px 630px;
+    padding: 10px;
+}
+.last-btn:hover{
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: #111111;
+    cursor: pointer;
+}
+footer{
+    width: 1439px;
+    height: 519px;
+    background-color: #10aef9;
+    margin: 0 auto  ;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+}
+.footer-desc{
+    font-size: 1.25rem;
+    font-weight: 400px; 
+    color: #ffffff;
+}
+.foot-bar{
+    width: 600px;
+    height: 350px;
+    margin: 150px 50px 50px 50px;
+}
+.footer-title{
+    font-size: 2rem;
+    font-weight: 800px;
+    color: #ffffff; 
+}
+.link-title{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-size: 800;
+    color: #ffffff;
+    margin-top: -110px;
+}
+.footer-link{
+    margin-top: -50px;
+}
+.link{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 40px;
+}
+.icon-title{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: -110px 200px 50px 200px;
+}
+.icon-link{
+    margin: -30px 200px 50px 200px;
+    cursor: pointer;
+}
 
 @keyframes scroll {
     0% {
@@ -422,7 +496,8 @@ nav{
     100% {
       transform: translateX(-100%);
     }
-  }
+}
+
  /* Media Query to hide the text on small screens */
 @media screen and (max-width: 576px) {
     .marquee-container,
