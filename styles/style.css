@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* background-image: url(../assets/bg.png); */
+}
+.raleway-font {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* shared style */
+.f-display{
+    display: flex;
+}
+nav{ 
+    margin: 10px auto;
+    max-width: 1440px;
+    align-items: center;
+}
+.title{
+    width: 227.75px;
+    height: 62px;
+    align-items: center;
+    margin-left: 0;
+}
+.nav-title{
+    font-size: 2rem;
+    font-weight: 800px;
+}
+.nav-link{
+    text-decoration: none;
+    justify-items: center;
+    margin: 0 auto;
+}
+.title-bar1{
+   text-decoration: none;
+   margin-right: 20px;
+   font-size: 1.25rem;
+   font-weight: 800;
+   color: #FEA301;
+}
+.title-bar2{
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #01ACFD;
+}
+.title-bar3{
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #05D4DF;
+}
+.title-bar4{
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #5D58EF;
+}
+.nav-btn{
+    width: 197px;
+    height: 50px;
+    font-family: "Quicksand", serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: #FEA301;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.marquee-container{
+    max-width: 1440px;
+    overflow: hidden;
+    background-color: #8c2bf9;
+    color: white;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.marquee{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
+}
+.marquee p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.Empowering-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.empowering-title{
+    font-size: 3.5rem;
+    font-weight: 800px;
+}
+#emp-org{
+  color: #FEA301;
+}
+#emp-blu{
+  color: #01ACFD;
+}
+.Empowering-desc{
+    font-size: 1.25rem;
+    font-weight: 400px; 
+}
+.Empowering-btn{
+    width: 197px;
+    height: 50px;
+    font-family: "Quicksand", serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px; 
+}
+
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+ /* Media Query to hide the text on small screens */
+@media screen and (max-width: 576px) {
+    .marquee-container,
+    .nav-link,
+    .nav-title,
+    .nav-btn{
+       visibility: hidden;
+    }
+    nav{
+        border: 2px solid #FEA301;
+        margin: 0px;
+    }
+    .nav-img{
+        margin-left: 0;
+    }
+    nav,
+    div{
+        flex-direction: column;
+    }
+
+}
