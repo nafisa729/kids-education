@@ -10,8 +10,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  /* background-image: url(../assets/bg.png); */
 }
+
 .raleway-font {
   font-family: "Raleway", serif;
   font-optical-sizing: auto;
@@ -32,6 +32,7 @@ nav{
     height: 62px;
     align-items: center;
     margin-left: 0;
+    cursor: pointer;
 }
 .nav-title{
     font-size: 2rem;
@@ -81,6 +82,12 @@ nav{
     border: none;
     border-radius: 10px;
     padding: 10px;
+    cursor: pointer;
+}
+.nav-btn:hover{
+    background-color: #e6871f;
+    color: #ffffff;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .marquee-container{
@@ -91,13 +98,20 @@ nav{
     padding: 10px 0;
     margin: 10px auto;
     border-radius: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    animation-play-state: running;
 }
 .marquee{
     display: inline-block;
     white-space: nowrap;
     animation: scroll 25s linear infinite;
+    transform: translateX(100%);
+}
+.marquee-container:hover .marquee {
+    animation-play-state: paused;
 }
 .marquee p {
     margin: 0;
@@ -108,6 +122,9 @@ nav{
     max-width: 1440px;
     margin: 0 auto;
     justify-content: space-between;
+}
+.Empowering-contant{
+    margin-top: 100px;
 }
 .empowering-title{
     font-size: 3.5rem;
@@ -133,19 +150,128 @@ nav{
     color: #ffffff;
     border: none;
     border-radius: 10px;
-    padding: 10px; 
+    padding: 10px;
+    cursor: pointer; 
 }
-
-
+.Empowering-btn:hover{
+    background-color: #ffffff;
+    color: #111111; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    border: 1px solid #111111;
+}
+.curriculum-section{
+    max-width: 1440px;
+    margin: 0px auto;
+    justify-content: center;
+    background-image: url(../assets/bg.png);
+}
+.curriculum-title{
+    font-size: 2.90rem;
+    font-weight: 800;
+    text-align: center;
+}
+.curriculum-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.kinder{
+    text-align: center;
+    border: 1px solid #daf0f9;
+    width: 367.8px;
+    height: 476.78px;
+    padding: 50px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom,#daf0f9,#ffffff );
+}
+.elementary{
+    text-align: center;
+    border: 1px solid #faefda;
+    width: 367.8px;
+    height: 476.78px;
+    padding: 50px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #faefda, #ffffff );
+} 
+.middle{
+    text-align: center;
+    border: 1px solid #e9def8;
+    width: 367.8px;
+    height: 476.78px;
+    padding: 50px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #e9def8, #ffffff ); 
+}
+.culum-subtitle{
+    font-size: 1.53rem;
+    font-weight: 800;
+}
+.culum-desc{
+    font-family: "Raleway", serif;
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: #808080;
+}
+.culum-btn{
+    text-decoration: none;
+    font-size: 0.94rem;
+    font-weight: 800;
+    color: #66c9fc;
+}
+.culum-btn-blu{
+    text-decoration: none;
+    font-size: 0.94rem;
+    font-weight: 800;
+    color: #efa82a; 
+}
+.culum-btn-ple{
+    text-decoration: none;
+    font-size: 0.94rem;
+    font-weight: 800;
+    color: #8526f9;
+}
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.icon-box{
+    width: 100px;  
+    height: 100px; 
+    border-radius: 50%;
+    background-color: #fda12a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+.icon-box:hover{
+    background-color: #e6871f;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+.fa-solid fa-chevron-left fa-2xl{
+    font-size: 24px;
+}
+.fa-solid fa-chevron-right fa-2xl{
+    font-size: 24px;
+}
+.story-title{
+    font-size: 2.88rem;
+    font-weight: 800;
+    text-align: center;
+}
 
 @keyframes scroll {
-    from {
-        transform: translateX(100%);
+    0% {
+      transform: translateX(100%);
     }
-    to {
-        transform: translateX(-100%);
+    100% {
+      transform: translateX(-100%);
     }
-}
+  }
  /* Media Query to hide the text on small screens */
 @media screen and (max-width: 576px) {
     .marquee-container,
@@ -162,8 +288,14 @@ nav{
         margin-left: 0;
     }
     nav,
-    div{
+    div,
+    .title,
+    .Empowering-container{
         flex-direction: column;
+    }
+    .curriculum-container{
+        grid-template-columns: repeat(1, 1fr);
+
     }
 
 }
