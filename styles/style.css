@@ -10,6 +10,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background: linear-gradient(to top, #FEA301, #ffffff);
 }
 
 .raleway-font {
@@ -172,8 +173,9 @@ nav{
     text-align: center;
 }
 .curriculum-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 55px;
 }
 .kinder{
     text-align: center;
@@ -258,11 +260,160 @@ nav{
 .fa-solid fa-chevron-right fa-2xl{
     font-size: 24px;
 }
+.story-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/bg.png);
+
+}
 .story-title{
     font-size: 2.88rem;
     font-weight: 800;
     text-align: center;
 }
+.toddler{
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    padding: 0;
+}
+.toddler img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+.toddler-container{
+    width: 540px;
+    height: 357px;
+    background-color: #ffffff;
+    border-radius: 0 0 20px 20px;
+    margin: 0px;
+    padding: 20px;
+}
+.toddler-title{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 20px;
+    padding: 20px; 
+}
+.toddler-desc{
+    font-size: 0.95rem;
+    font-weight: 500; 
+    color: #666666;
+    padding: 0 20px;
+}
+.big-date{
+    position: absolute;
+    height: 50px;
+    width: 175px;
+    border-radius: 50px;
+    font-family: "Raleway", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    color: white;
+    background-color: #3CD8E8;
+    padding: 10px;
+    margin-top: -45px;
+    margin-left: 20px;
+}
+.story-contant{
+    display: flex;
+}
+.grid-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 40px;
+}
+.needs{
+    display: inline-block;
+    position: relative;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+.needs img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+.needs-container{
+    width: 290.69px;
+    height: 124px;
+    background-color: #ffffff;
+    border-radius: 0 0 20px 20px;
+    margin: 0px;
+    padding: 20px;
+}
+.needs-title{
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-top: 20px;
+    padding: 20px; 
+}
+.story2-date{
+    position: absolute;
+    height: 50px;
+    width: 175px;
+    border-radius: 50px;
+    font-family: "Raleway", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    color: white;
+    background-color: #96b139;
+    padding: 10px;
+    margin-top: -45px;
+    margin-left: 20px;
+}
+.story3-date{
+    position: absolute;
+    height: 50px;
+    width: 175px;
+    border-radius: 50px;
+    font-family: "Raleway", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    color: white;
+    background-color: #5c5eeb;
+    padding: 10px;
+    margin-top: -45px;
+    margin-left: 20px;
+}
+.story4-date{
+    position: absolute;
+    height: 50px;
+    width: 175px;
+    border-radius: 50px;
+    font-family: "Raleway", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    color: white;
+    background-color: #e84d88;
+    padding: 10px;
+    margin-top: -45px;
+    margin-left: 20px;
+}
+.story5-date{
+    position: absolute;
+    height: 50px;
+    width: 175px;
+    border-radius: 50px;
+    font-family: "Raleway", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    color: white;
+    background-color: #10aef9;
+    padding: 10px;
+    margin-top: -45px;
+    margin-left: 20px;
+}
+
 
 @keyframes scroll {
     0% {
@@ -277,8 +428,17 @@ nav{
     .marquee-container,
     .nav-link,
     .nav-title,
-    .nav-btn{
-       visibility: hidden;
+    .nav-btn,
+    .icon-container,
+    .toddler{
+       display: none;
+    }
+    nav,
+    div,
+    .title,
+    .Empowering-container,
+    .story-contant{
+        flex-direction: column;
     }
     nav{
         border: 2px solid #FEA301;
@@ -287,11 +447,11 @@ nav{
     .nav-img{
         margin-left: 0;
     }
-    nav,
-    div,
-    .title,
-    .Empowering-container{
-        flex-direction: column;
+    .Empowering-logo{
+        margin: 10px;
+    }
+    .grid-section{
+        grid-template-columns: repeat(2, 1fr);
     }
     .curriculum-container{
         grid-template-columns: repeat(1, 1fr);
