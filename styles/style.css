@@ -51,12 +51,21 @@ nav{
    font-weight: 800;
    color: #FEA301;
 }
+.title-bar1:hover{
+    color: #D48801;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
 .title-bar2{
   text-decoration: none;
   margin-right: 20px;
   font-size: 1.25rem;
   font-weight: 800;
   color: #01ACFD;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.title-bar2:hover{
+    color: #018DD1;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 .title-bar3{
   text-decoration: none;
@@ -65,12 +74,19 @@ nav{
   font-weight: 800;
   color: #05D4DF;
 }
+.title-bar3:hover{
+    color: #03A5AF;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
 .title-bar4{
     text-decoration: none;
     margin-right: 20px;
     font-size: 1.25rem;
     font-weight: 800;
     color: #5D58EF;
+}
+.title-bar4:hover{
+    color: #3C36C0;
 }
 .nav-btn{
     width: 197px;
@@ -90,7 +106,9 @@ nav{
     color: #ffffff;
     transition: background-color 0.3s ease, opacity 0.3s ease;
 }
-
+.hamburger-menu{
+    display: none;
+}
 .marquee-container{
     max-width: 1440px;
     overflow: hidden;
@@ -423,7 +441,7 @@ nav{
     font-weight: 800;
     background-color: #111111;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     color: #ffffff;
     margin: 20px 630px;
     padding: 10px;
@@ -433,18 +451,25 @@ nav{
     border: 1px solid black;
     color: #111111;
     cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 footer{
-    width: 1439px;
+    width: 100%;
     height: 519px;
     background-color: #10aef9;
-    margin: 0 auto  ;
-    align-items: center;
+    margin: 0;
+    padding: 50px 0;
+    display: flex;
     justify-content: space-evenly;
 }
 .footer-container{
+    width: 90%;
+    max-width: 1200px;
+    padding-top: 123px;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 .footer-desc{
     font-size: 1.25rem;
@@ -452,42 +477,54 @@ footer{
     color: #ffffff;
 }
 .foot-bar{
-    width: 600px;
-    height: 350px;
-    margin: 150px 50px 50px 50px;
+    width: 30%;
+    min-width: 250px;
+}
+.foot-title{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.foot-img{
+    margin-top: 50px;
 }
 .footer-title{
+    margin-left: -110px;
     font-size: 2rem;
     font-weight: 800px;
     color: #ffffff; 
 }
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 .link-title{
     text-decoration: none;
     font-size: 1.5rem;
-    font-size: 800;
+    font-weight: 800;
     color: #ffffff;
-    margin-top: -110px;
-}
-.footer-link{
-    margin-top: -50px;
+    margin: 0;
 }
 .link{
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 500;
     color: #ffffff;
-    margin-top: 40px;
+    margin: 0;
 }
 .icon-title{
     font-size: 1.6rem;
     font-weight: 800;
     color: #ffffff;
-    margin: -110px 200px 50px 200px;
+    margin-bottom: 20px;
 }
 .icon-link{
-    margin: -30px 200px 50px 200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     cursor: pointer;
 }
+
 
 @keyframes scroll {
     0% {
@@ -500,7 +537,6 @@ footer{
 
  /* Media Query to hide the text on small screens */
 @media screen and (max-width: 576px) {
-    .marquee-container,
     .nav-link,
     .nav-title,
     .nav-btn,
@@ -508,12 +544,75 @@ footer{
     .toddler{
        display: none;
     }
-    nav,
+    .nav-img{
+        height: auto;
+        width: 50px;
+        margin-top: 5px;
+    }
+    body{
+        padding: 10px;
+    }
+    .hamburger-menu{
+        display: inline-block;
+        width: 100px;
+        margin-left: 200px;
+    }
     div,
-    .title,
-    .Empowering-container,
-    .story-contant{
+    footer{
         flex-direction: column;
+        align-items: flex-start;
+    }
+    .foot-bar{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .icon-link img{
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+    }
+    footer{
+        height: 100%;
+        width: 100%;
+    }
+    .footer-container {
+        flex-direction: column;
+        margin-left: 30px;
+        text-align: left;
+        padding-top: 20px;
+    }
+    .footer-title {
+        font-size: 1.5rem;
+        margin-left: -90px;
+        margin-top: 50px;
+    }
+    .footer-desc {
+        font-size: 1rem;
+    }
+    .footer-link {
+        width: 100%;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+    .link-title {
+        font-size: 1.25rem;
+    }
+    .link {
+        font-size: 1rem;
+    }
+    .icon-title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    .icon-link {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        gap: 10px;
+    }
+    .icon-link img {
+        width: 40px; 
+        height: 40px;
     }
     nav{
         border: 2px solid #FEA301;
@@ -522,15 +621,72 @@ footer{
     .nav-img{
         margin-left: 0;
     }
-    .Empowering-logo{
-        margin: 10px;
+    .story-container {
+        margin-left: 0;
     }
     .grid-section{
         grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        gap: 0;
     }
+    .needs,
+    .needs-container{
+       width: 173px;
+       margin-right: 10px;
+    }
+    .needs img{
+        width: 100%;
+        display: block;
+        border-radius: 20px 20px 0 0;
+    }
+    .needs-container{
+        padding: 0;
+        height: 150px;
+        margin-top: -20px;
+    }
+    .needs-title{
+        font-size: 0.9rem;
+    }
+    .big-date, .story2-date, .story3-date, .story4-date, .story5-date { 
+        width: 103px;
+        height: 25px;
+        margin-top: -10px;
+        margin-left: 10px;
+        font-size: 0.6rem;
+    }    
+    
     .curriculum-container{
         grid-template-columns: repeat(1, 1fr);
-
+        margin-left: 0;
     }
-
+    .kinder, .elementary, .middle {
+        width: 300px;
+        height: 400px;
+        margin: 10px auto;
+    }
+    .marquee-container{
+        width: 100%;
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+    .Empowering-container {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    .Empowering-contant{
+        margin-top: 0;
+    }
+    .empowering-title {
+        font-size: 2rem;
+    }
+    .Empowering-desc {
+        font-size: 1rem;
+    }
+    .Empowering-logo img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        max-height: 80vh;
+    }
+    
 }
