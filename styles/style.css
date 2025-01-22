@@ -1,9 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 
 body {
   font-family: "Quicksand", serif;
@@ -11,13 +7,6 @@ body {
   font-weight: 400;
   font-style: normal;
   background: linear-gradient(to top, #ffd38e, #ffffff);
-}
-
-.raleway-font {
-  font-family: "Raleway", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 /* shared style */
 .f-display{
@@ -61,7 +50,6 @@ nav{
   font-size: 1.25rem;
   font-weight: 800;
   color: #01ACFD;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 .title-bar2:hover{
     color: #018DD1;
@@ -240,17 +228,29 @@ nav{
     font-weight: 800;
     color: #66c9fc;
 }
+.culum-btn:hover{
+    color: #018DD1;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
 .culum-btn-blu{
     text-decoration: none;
     font-size: 0.94rem;
     font-weight: 800;
     color: #efa82a; 
 }
+.culum-btn-blu:hover{
+    color: #D48801;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
 .culum-btn-ple{
     text-decoration: none;
     font-size: 0.94rem;
     font-weight: 800;
     color: #8526f9;
+}
+.culum-btn-ple:hover{
+    color: #3C36C0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 .icon-container{
     display: flex;
